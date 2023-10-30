@@ -25,11 +25,5 @@ pipeline {
                 sh script: "sudo su - root bash -c 'rm oracle-database-preinstall-19c-1.0-1.el7.x86_64.rpm'"
             }
         }
-           stage ('Create Database') {
-            steps { 
-                echo 'Creating Oracle Database'
-                sh script: "sudo su - root bash -c '/etc/init.d/oracledb_ORCLCDB-19c configure'"
-            }
-        }
       }
     }
